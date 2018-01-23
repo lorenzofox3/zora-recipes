@@ -1,0 +1,28 @@
+{
+  "name": "zora-recipes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test:node": "rollup -f cjs ./test/index.js | node | faucet",
+    "test:browser": "karma start karma.conf.js ",
+    "test": "npm run test:node && npm run test:browser"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-rollup-preprocessor": "^5.1.1",
+    "karma-tap": "^4.0.0",
+    "rollup": "^0.54.1",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "zora": "^1.1.5"
+  },
+  "dependencies": {
+    "smart-table-operators": "^2.0.2"
+  }
+}

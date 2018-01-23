@@ -1,0 +1,34 @@
+{
+  "name": "super-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/",
+  "module": "./src/index.js",
+  "jsnext:main": "./src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build:es": "rollup -f es ./src/index.js > ./dist/index.mjs",
+    "build:cjs": "rollup -f cjs ./src/index.js > ./dist/index.js",
+    "build:cdn:iife": "rollup -f iife -n superLib ./src/index.js -m -o ./dist/super-lib.js",
+    "build:cdn:es": "rollup -f es ./src/index.js -m -o ./dist/super-lib.module.js",
+    "build:cdn": "npm run build:cdn:iife && npm run build:cdn:es",
+    "build": "npm run build:es && npm run build:cjs && npm run build:cdn",
+
+    "example:node:cjs": "node ./example/node/cjs.js",
+    "example:node:harmony": "node --experimental-modules ./example/node/harmony.mjs",
+    "test:browser": "(cat ./node_modules/zora/dist/zora.js && rollup -f iife ./test/index.js) | tape-run | tap-diff",
+    "test:node": "rollup -f cjs ./test/index.js | node | tap-diff",
+    "test:debug": "(cat ./node_modules/zora/dist/zora.js && rollup -f iife -m inline -n test ./test/index.js) > ./test/debug/debug.js",
+    "test": "npm run test:node && npm run test:browser"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^0.54.1",
+    "tap-diff": "^0.1.1",
+    "tape-run": "^3.0.1",
+    "zora": "^1.1.5"
+  }
+}

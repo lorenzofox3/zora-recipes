@@ -1,0 +1,26 @@
+{
+  "name": "zora-recipes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test:node": "rollup -f cjs ./test/index.js | node | faucet",
+    "test:browser": "rollup -c ./rollup/test.js | tape-run | faucet",
+    "test": "npm run test:node && npm run test:browser"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "rollup": "^0.54.1",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "tape-run": "^3.0.1",
+    "zora": "^1.1.5"
+  },
+  "dependencies": {
+    "smart-table-operators": "^2.0.3"
+  }
+}

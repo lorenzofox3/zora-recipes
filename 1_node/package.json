@@ -1,0 +1,18 @@
+{
+  "name": "super-library",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node ./test/index.js | tap-diff",
+    "example":"node ./example/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tap-diff": "^0.1.1",
+    "zora": "^1.1.5"
+  }
+}
