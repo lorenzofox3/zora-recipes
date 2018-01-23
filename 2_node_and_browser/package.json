@@ -15,7 +15,6 @@
     "build:cdn:es": "rollup -f es ./src/index.js -m -o ./dist/super-lib.module.js",
     "build:cdn": "npm run build:cdn:iife && npm run build:cdn:es",
     "build": "npm run build:es && npm run build:cjs && npm run build:cdn",
-
     "example:node:cjs": "node ./example/node/cjs.js",
     "example:node:harmony": "node --experimental-modules ./example/node/harmony.mjs",
     "test:browser": "(cat ./node_modules/zora/dist/zora.js && rollup -f iife ./test/index.js) | tape-run | tap-diff",
