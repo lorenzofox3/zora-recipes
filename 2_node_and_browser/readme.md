@@ -91,9 +91,10 @@ However both format can consume our library. Mission accomplished !
 
 ## Tests
 
+// todo
 
 ## conclusion
 
 - many command -> use conf
 - intro next (with a dep)
-- alternative (source as mjs)
+- alternative (source as mjs + babel)

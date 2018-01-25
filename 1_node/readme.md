@@ -8,7 +8,7 @@ For this tutorial we are going to create a simple math library with two function
 2. `square` which takes an integer and returns the square of this integer.
 
 These source files corresponding to these functions are in the `./src` directory.
-They are simple javascript code. You will note that they use the ** Commonjs (cjs) ** module format, specific to Nodejs: for the moment our library only targets Nodejs.
+They are simple javascript code. You will note that they use the **Commonjs (cjs)** module format, specific to Nodejs: for the moment our library only targets Nodejs.
 
 ## build and production packaging
 
