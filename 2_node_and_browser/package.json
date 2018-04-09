@@ -25,9 +25,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "rollup": "^0.54.1",
+    "rollup": "^0.57.1",
     "tap-diff": "^0.1.1",
-    "tape-run": "^3.0.1",
-    "zora": "^1.1.5"
+    "tape-run": "^4.0.0",
+    "zora": "^2.0.1"
   }
 }

@@ -15,12 +15,12 @@
   "license": "ISC",
   "devDependencies": {
     "faucet": "0.0.1",
-    "rollup": "^0.54.1",
-    "rollup-plugin-node-resolve": "^3.0.2",
-    "tape-run": "^3.0.1",
-    "zora": "^1.1.5"
+    "rollup": "^0.57.1",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "tape-run": "^4.0.0",
+    "zora": "^2.0.1"
   },
   "dependencies": {
-    "smart-table-operators": "^2.0.3"
+    "smart-table-operators": "^2.0.4"
   }
 }

@@ -13,6 +13,6 @@
   "license": "ISC",
   "devDependencies": {
     "tap-diff": "^0.1.1",
-    "zora": "^1.1.5"
+    "zora": "^2.0.1"
   }
 }
