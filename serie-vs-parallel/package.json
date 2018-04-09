@@ -1,0 +1,21 @@
+{
+  "name": "zora-serie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {},
+  "dependencies": {
+    "zora": "^2.0.1"
+  },
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-commonjs": "^9.1.0"
+  },
+  "scripts": {
+    "test:ci": "rollup -c ./rollup/parallel.js && time node ./test/dist/parallel.js",
+    "test:browser": "rollup -c ./rollup/sequential.js && time node ./test/dist/sequential.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
