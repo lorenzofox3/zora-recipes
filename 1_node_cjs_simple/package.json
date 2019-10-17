@@ -1,0 +1,26 @@
+{
+  "name": "node_simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "tap-diff": "^0.1.1"
+  },
+  "devDependencies": {
+    "c8": "^5.0.4",
+    "chokidar-cli": "^2.0.0",
+    "faucet": "0.0.1",
+    "nodemon": "^1.19.2",
+    "tap-set-exit": "^1.1.1",
+    "zora": "^3.1.0"
+  },
+  "scripts": {
+    "test": "node ./test/index.js",
+    "test:ci": "npm t | tap-set-exit",
+    "test:coverage": "c8 npm t",
+    "test:only": "RUN_ONLY=true npm t",
+    "dev": "chokidar \"{test,src}/*.js\" -c \"npm t | faucet\""
+  },
+  "author": "",
+  "license": "ISC"
+}
