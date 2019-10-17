@@ -1,0 +1,26 @@
+{
+  "name": "node_simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "tap-diff": "^0.1.1"
+  },
+  "devDependencies": {
+    "arg": "^4.1.1",
+    "c8": "^5.0.4",
+    "chokidar-cli": "^2.0.0",
+    "globby": "^10.0.1",
+    "tap-mocha-reporter": "^5.0.0",
+    "zora": "^3.1.0"
+  },
+  "scripts": {
+    "test": "node ./test/test-runner.js",
+    "test:ci": "npm t",
+    "test:coverage": "c8 npm t",
+    "test:only": "npm t -- --only",
+    "dev": "chokidar \"{test,src}/*.js\" -c \"npm t | tap-mocha-reporter spec\""
+  },
+  "author": "",
+  "license": "ISC"
+}
