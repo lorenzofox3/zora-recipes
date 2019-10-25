@@ -72,7 +72,6 @@ const DEFAULT_FILE_PATTERN = ['./test/*.spec.js'];
         for (const f of files) {
             testHarness.test(f, require(path.resolve(process.cwd(), f)));
         }
-        // force indented reporting
         await testHarness.report();
     } catch (e) {
         console.error(e);

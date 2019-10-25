@@ -8,17 +8,14 @@
     "chokidar-cli": "^2.0.0",
     "faucet": "0.0.1",
     "tap-set-exit": "^1.1.1",
-    "typescript": "^3.6.4",
     "zora": "^3.1.0"
   },
   "scripts": {
-    "test:build": "tsc",
-    "test:run": "node ./test/index.js",
-    "test": "npm run test:build && npm run test:run",
+    "test": "node ./test/index.js",
     "test:ci": "npm t | tap-set-exit",
-    "test:coverage": "c8 npm run test:run",
+    "test:coverage": "c8 npm t",
     "test:only": "RUN_ONLY=true npm t",
-    "dev": "npm run build -- -w & chokidar \"{test,src}/*.js\" -c \"npm run test:run\""
+    "dev": "chokidar \"{test,src}/*.js\" -c \"npm t | faucet\""
   },
   "author": "",
   "license": "ISC"
